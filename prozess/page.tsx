@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 
 const steps = [
   {
@@ -36,34 +35,19 @@ export default function ProzessPage() {
       <section className="pt-20 md:pt-32 pb-20 md:pb-24 bg-white dark:bg-black">
         <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
           {/* Tag */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-block mb-6"
-          >
+          <div className="inline-block mb-6">
             <span className="text-primary font-black text-xs tracking-widest uppercase">Prozess</span>
-          </motion.div>
+          </div>
 
           {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight mb-6 text-gray-900 dark:text-white"
-          >
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight mb-6 text-gray-900 dark:text-white">
             SO GEHT'S ZU DEINEM<br />
             <span className="text-primary">PERFORMANCE WEBPROJEKT</span>
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl leading-relaxed"
-          >
+          <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl leading-relaxed">
             Unser bewährter Prozess führt dein Projekt von der Idee zur erfolgreichen Umsetzung. Transparenz, Qualität und dein Erfolg stehen dabei an erster Stelle.
-          </motion.p>
+          </p>
         </div>
       </section>
 
@@ -74,12 +58,8 @@ export default function ProzessPage() {
             {/* Timeline Steps */}
             <div className="space-y-24 md:space-y-32">
               {steps.map((step, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.6 }}
                   className="relative"
                 >
                   {/* Timeline Dot & Line (Desktop only) */}
@@ -93,13 +73,7 @@ export default function ProzessPage() {
                     {step.side === 'left' ? (
                       <>
                         {/* Image Left */}
-                        <motion.div
-                          initial={{ opacity: 0, x: -40 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true, margin: "-100px" }}
-                          transition={{ duration: 0.6, delay: 0.1 }}
-                          className="relative group"
-                        >
+                        <div className="relative group">
                           <div className="relative aspect-video md:aspect-square rounded-3xl overflow-hidden shadow-2xl bg-gray-200 dark:bg-gray-800">
                             <img
                               src={step.image}
@@ -109,16 +83,10 @@ export default function ProzessPage() {
                           </div>
                           {/* Decorative Circle */}
                           <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-primary/10 rounded-full blur-3xl hidden md:block" />
-                        </motion.div>
+                        </div>
 
                         {/* Content Right */}
-                        <motion.div
-                          initial={{ opacity: 0, x: 40 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true, margin: "-100px" }}
-                          transition={{ duration: 0.6, delay: 0.2 }}
-                          className="space-y-6"
-                        >
+                        <div className="space-y-6">
                           <div>
                             <span className="text-primary font-black text-sm tracking-widest uppercase">{step.label} {step.number}</span>
                             <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mt-3 tracking-tight">
@@ -128,18 +96,12 @@ export default function ProzessPage() {
                           <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                             {step.description}
                           </p>
-                        </motion.div>
+                        </div>
                       </>
                     ) : (
                       <>
                         {/* Content Left */}
-                        <motion.div
-                          initial={{ opacity: 0, x: -40 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true, margin: "-100px" }}
-                          transition={{ duration: 0.6, delay: 0.2 }}
-                          className="space-y-6"
-                        >
+                        <div className="space-y-6">
                           <div>
                             <span className="text-primary font-black text-sm tracking-widest uppercase">{step.label} {step.number}</span>
                             <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mt-3 tracking-tight">
@@ -149,16 +111,10 @@ export default function ProzessPage() {
                           <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                             {step.description}
                           </p>
-                        </motion.div>
+                        </div>
 
                         {/* Image Right */}
-                        <motion.div
-                          initial={{ opacity: 0, x: 40 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true, margin: "-100px" }}
-                          transition={{ duration: 0.6, delay: 0.1 }}
-                          className="relative group"
-                        >
+                        <div className="relative group">
                           <div className="relative aspect-video md:aspect-square rounded-3xl overflow-hidden shadow-2xl bg-gray-200 dark:bg-gray-800">
                             <img
                               src={step.image}
@@ -177,7 +133,7 @@ export default function ProzessPage() {
                   <div className="hidden md:flex absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white dark:bg-gray-900 border-4 border-primary rounded-full items-center justify-center">
                     <div className="w-4 h-4 bg-primary rounded-full" />
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -187,12 +143,7 @@ export default function ProzessPage() {
       {/* CTA Section */}
       <section className="py-20 md:py-32 bg-white dark:bg-black">
         <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12 text-center space-y-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <span className="text-primary font-black text-xs tracking-widest uppercase block mb-4">Bereit zu starten?</span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-6 text-gray-900 dark:text-white">
               Lass uns dein Projekt<br />
