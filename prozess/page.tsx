@@ -1,5 +1,4 @@
-'use client'
-
+import Link from 'next/link'
 
 const steps = [
   {
@@ -34,12 +33,10 @@ export default function ProzessPage() {
       {/* Hero Section */}
       <section className="pt-20 md:pt-32 pb-20 md:pb-24 bg-white dark:bg-black">
         <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
-          {/* Tag */}
           <div className="inline-block mb-6">
             <span className="text-primary font-black text-xs tracking-widest uppercase">Prozess</span>
           </div>
 
-          {/* Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight mb-6 text-gray-900 dark:text-white">
             SO GEHT'S ZU DEINEM<br />
             <span className="text-primary">PERFORMANCE WEBPROJEKT</span>
@@ -55,24 +52,16 @@ export default function ProzessPage() {
       <section className="py-24 md:py-32 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="relative">
-            {/* Timeline Steps */}
             <div className="space-y-24 md:space-y-32">
               {steps.map((step, idx) => (
-                <div
-                  key={idx}
-                  className="relative"
-                >
-                  {/* Timeline Dot & Line (Desktop only) */}
+                <div key={idx} className="relative">
                   {idx < steps.length - 1 && (
                     <div className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary via-primary to-transparent opacity-30" />
                   )}
 
-                  {/* Grid Layout */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-                    {/* Left Side - Image or Content */}
                     {step.side === 'left' ? (
                       <>
-                        {/* Image Left */}
                         <div className="relative group">
                           <div className="relative aspect-video md:aspect-square rounded-3xl overflow-hidden shadow-2xl bg-gray-200 dark:bg-gray-800">
                             <img
@@ -81,11 +70,9 @@ export default function ProzessPage() {
                               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             />
                           </div>
-                          {/* Decorative Circle */}
                           <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-primary/10 rounded-full blur-3xl hidden md:block" />
                         </div>
 
-                        {/* Content Right */}
                         <div className="space-y-6">
                           <div>
                             <span className="text-primary font-black text-sm tracking-widest uppercase">{step.label} {step.number}</span>
@@ -100,7 +87,6 @@ export default function ProzessPage() {
                       </>
                     ) : (
                       <>
-                        {/* Content Left */}
                         <div className="space-y-6">
                           <div>
                             <span className="text-primary font-black text-sm tracking-widest uppercase">{step.label} {step.number}</span>
@@ -113,7 +99,6 @@ export default function ProzessPage() {
                           </p>
                         </div>
 
-                        {/* Image Right */}
                         <div className="relative group">
                           <div className="relative aspect-video md:aspect-square rounded-3xl overflow-hidden shadow-2xl bg-gray-200 dark:bg-gray-800">
                             <img
@@ -122,14 +107,12 @@ export default function ProzessPage() {
                               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             />
                           </div>
-                          {/* Decorative Circle */}
                           <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-primary/10 rounded-full blur-3xl hidden md:block" />
                         </div>
                       </>
                     )}
                   </div>
 
-                  {/* Timeline Dot (Desktop only) */}
                   <div className="hidden md:flex absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white dark:bg-gray-900 border-4 border-primary rounded-full items-center justify-center">
                     <div className="w-4 h-4 bg-primary rounded-full" />
                   </div>
@@ -149,31 +132,19 @@ export default function ProzessPage() {
               Lass uns dein Projekt<br />
               <span className="text-primary">gemeinsam aufbauen</span>
             </h2>
-          </motion.div>
+          </div>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto"
-          >
+          <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
             Kontaktiere uns noch heute für dein kostenloses Erstgespräch und erfahre, wie wir dein Business digital wachsen lassen.
-          </motion.p>
+          </p>
 
-          <motion.a
+          <a
             href="/kontakt"
             style={{ backgroundImage: 'linear-gradient(135deg, #B81D63 0%, #8B2D7A 100%)' }}
-            className="inline-flex items-center justify-center px-10 py-4 rounded-full font-black text-white transition-all duration-300 shadow-lg text-lg"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center justify-center px-10 py-4 rounded-full font-black text-white transition-all duration-300 shadow-lg text-lg hover:opacity-90"
           >
             Kostenlose Beratung buchen
-          </motion.a>
+          </a>
         </div>
       </section>
     </>
