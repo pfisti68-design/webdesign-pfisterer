@@ -1,0 +1,34 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="radialAccent" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#B81D63;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#8B2D7A;stop-opacity:0.3" />
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#grad4)"/>
+
+  <!-- Large central circle -->
+  <circle cx="400" cy="300" r="200" fill="url(#radialAccent)"/>
+
+  <!-- Geometric elements around -->
+  <polygon points="100,100 180,80 200,160" fill="#B81D63" opacity="0.7"/>
+  <polygon points="700,120 620,100 640,180" fill="#8B2D7A" opacity="0.7"/>
+
+  <rect x="50" y="450" width="140" height="120" fill="#B81D63" opacity="0.5" transform="rotate(-20 120 510)"/>
+  <rect x="710" y="420" width="140" height="140" fill="#8B2D7A" opacity="0.5" transform="rotate(25 780 490)"/>
+
+  <!-- Triangles -->
+  <polygon points="400,100 500,200 300,200" fill="#B81D63" opacity="0.4"/>
+  <polygon points="400,500 480,400 320,400" fill="#8B2D7A" opacity="0.4"/>
+
+  <!-- Text -->
+  <text x="400" y="320" font-size="48" font-weight="bold" text-anchor="middle" fill="white" opacity="0.15" font-family="Arial, sans-serif">
+    DESIGN
+  </text>
+</svg>
