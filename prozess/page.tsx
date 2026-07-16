@@ -124,7 +124,7 @@ export default function ProzessPage() {
                           </div>
                           {/* Decorative Circle */}
                           <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-primary/10 rounded-full blur-3xl hidden md:block" />
-                        </motion.div>
+                        </div>
                       </>
                     )}
                   </div>
